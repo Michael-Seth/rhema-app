@@ -48,7 +48,11 @@ class App extends Component {
           )}
         </div>
         <div className="footer">
-          Made with <span>❤️</span> by Michael Seth
+          Made with{" "}
+          <span role="img" aria-label="heart">
+            ❤️
+          </span>{" "}
+          by Michael Seth
         </div>
       </div>
     );
