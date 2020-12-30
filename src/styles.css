@@ -1,0 +1,130 @@
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://cdn.pixabay.com/photo/2016/11/29/05/55/adult-1867665_960_720.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Pompiere", cursive;
+  flex-direction: column;
+  height: 700px;
+}
+
+.card {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+}
+
+.footer {
+  font-family: "Pompiere", cursive;
+  background: #fff;
+  width: 100%;
+  padding: 15px;
+  position: fixed;
+  font-size: 18px;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.verse {
+  font-size: 22px;
+}
+@media only screen and (max-width: 700px) {
+  .card {
+    margin: 3%;
+  }
+}
+
+.reference {
+  margin: 10px;
+  text-align: left;
+  color: rgb(2, 2, 53);
+  font-size: 14px;
+}
+.button {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 2px solid rgba(20, 13, 69, 0.8);
+  margin-top: 15px;
+}
+
+.button span {
+  color: #164ca7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+
+.button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
